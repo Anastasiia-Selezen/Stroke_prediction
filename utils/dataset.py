@@ -52,6 +52,6 @@ class Dataset:
         @return: pd.DataFrame, pd.Series
         """
         data = pd.read_csv(self.csv_file, nrows=items_number)
-        y =
-        x =
+        y = data['stroke']
+        x = data.drop(['stroke'], axis=1)
         return x, y
