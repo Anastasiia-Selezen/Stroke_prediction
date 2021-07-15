@@ -1,9 +1,10 @@
+from sklearn.svm import SVC
 
 
 class Estimator:
     @staticmethod
     def fit(train_x, train_y):
-        pass
+        return SVC().fit(train_x, train_y)
 
     @staticmethod
     def predict(trained, test_x):
